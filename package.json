@@ -1,0 +1,19 @@
+{
+  "name": "coop-test-extension",
+  "version": "0.0.0",
+  "description": "Cross-Origin-Opener-Policy脆弱性テスト用エクステンション",
+  "license": "MIT",
+  "keywords": ["security", "coop", "vulnerability-testing", "education", "browser-extension"],
+  "private": true,
+  "scripts": {
+    "build": "tsc && cp src/manifest.json dist/ && cp src/popup/index.html dist/popup/ && cp -r src/icons dist/",
+    "dev": "tsc --watch",
+    "lint": "biome check .",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/chrome": "^0.0.254",
+    "@biomejs/biome": "^1.8.0"
+  }
+}

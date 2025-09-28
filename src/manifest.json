@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "COOP Test Extension Safari",
+  "version": "1.0.0",
+  "description": "Cross-Origin-Opener-Policy脆弱性テスト用エクステンション",
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+  "permissions": [
+    "activeTab",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_title": "COOP Security Test",
+    "default_popup": "popup/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content_scripts/content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "content_scripts/attack.js"
+  ]
+}
